@@ -32,7 +32,7 @@ def attach_file(msg,r_joint_src):
     msg.add_attachment(file_data,maintype='application',subtype='octet-stream',filename=file_name)
 
 def add_html(msg,html_file):
-    f=codecs.open(html_file,'r')
+    f=codecs.open(html_file,'r', 'utf-8')
     #print(f.read())
     msg.add_alternative(f.read(),subtype='html')
 
