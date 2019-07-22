@@ -5,7 +5,7 @@ def nothing(x):
     # any operation
     pass
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 
 cv2.namedWindow("Trackbars")
 cv2.createTrackbar("L-H", "Trackbars", 0, 180, nothing)
@@ -36,7 +36,7 @@ while True:
     mask = cv2.erode(mask, kernel)
 
     # Contours detection
-    _, contours, _ = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    contours, _ = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
     for cnt in contours:
         area = cv2.contourArea(cnt)
