@@ -45,8 +45,8 @@ def record_cmd():
         audio = r.listen(source,timeout=3)   
 
     try:
-        #text = r.recognize_google(audio,language='FR-fr')
-        text = r.recognize_google(audio)
+        text = r.recognize_google(audio,language='FR-fr')
+        #text = r.recognize_google(audio)
             
         print(text)
     except LookupError:                          
