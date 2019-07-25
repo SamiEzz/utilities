@@ -1,0 +1,27 @@
+{
+    "tasks":
+    [    
+        {
+        "id": "0",
+        "name":"Rick et morty",
+        "audio_rec":"Rick et Morty",
+        "nb_moves":5,
+        "cmd_click1": ["./ressourses/profile_netflix.png","./ressourses/search_netflix.png"],
+        "delay1": 1,
+        "cmd_key1":["Rick et morty"],
+        "cmd_click2":["./ressourses/rm_netflix.png"]
+
+        },
+        {        
+        "id": "1",
+        "name":"rap playlist",
+        "audio_rec":"Rap playlist",
+        "nb_moves":5,
+        "cmd_click1": ["./ressourses/profile_netflix.png","./ressourses/search_netflix.png"],
+        "delay1": 1,
+        "cmd_key1":["Rick et morty"],
+        "cmd_click2":["./ressourses/rm_netflix.png"]
+        
+        }
+    ]
+}

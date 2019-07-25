@@ -2,10 +2,20 @@ import pyautogui
 import speech_recognition as sr
 import pyttsx3
 import functions
+import json
 from time import sleep
 
 
 engine = pyttsx3.init()
+
+def task_run(id):
+    with open('d:/CODE/git/utilities/aZeus/ressources/tasks.json') as json_tasks:
+        data = json.load(json_tasks)
+        
+        for task in data['tasks']:
+            for i in task:
+                print(i+" : "+str(task[i]))
+
 
 def play_youtube_pl_rap():    
     print("play_rickandmorty")
@@ -70,6 +80,8 @@ def main():
         engine.runAndWait()
         play_youtube_pl_rap()
         
-while(1):
-    main()
-    sleep(1)
+# while(1):
+#     main()
+#     sleep(1)
+
+task_run(0)
