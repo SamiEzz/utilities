@@ -1,8 +1,8 @@
 int _a=4;
 int _b=0;
 int _c=8;
-int _d=10;
-int _e=11;
+int _d=11;
+int _e=10;
 int _f=3;
 int _g=7;
 int _dp=9;
@@ -10,10 +10,8 @@ int _1=5;
 int _2=2;
 int _3=1;
 int _4=6;
-
-#define _h HIGH
-#define _l LOW
-
+unsigned short int num=1489;
+    
 void setup(){
     pinMode(_a,OUTPUT);
     pinMode(_b,OUTPUT);
@@ -31,15 +29,38 @@ void setup(){
 }
 
 void loop(){
-    unsigned short int num=0;
-    int delay=10;
-    
-    code(num);
-    
-    afficher(num);
-    sleep(delay);
+    digitalWrite(_1,HIGH);
+    digitalWrite(_2,HIGH);
+    digitalWrite(_3,HIGH);
+    digitalWrite(_4,HIGH);
+    /*
+    digitalWrite(_1,LOW);
+    print_2();
+    digitalWrite(_1,HIGH);
+  */
+    digitalWrite(_2,LOW);
+    print_2();
+    digitalWrite(_2,HIGH);
+    delay(1);
+    digitalWrite(_3,LOW);
+    print_4();
+    digitalWrite(_3,HIGH);
+    delay(1);
+    digitalWrite(_4,LOW);
+    print_8();
+    digitalWrite(_4,HIGH);
+    delay(1);
 }
 
+
+void e_loop(){
+    int m_delay=10;
+    
+    num+=1;
+    
+    afficher(num);
+    delay(m_delay);
+}
 
 
 void afficher(int num){
@@ -49,21 +70,21 @@ void afficher(int num){
     d = (num - m - c - ((num-m-c)%10))/10;
     u = num - m - c - d ;
 
-    digitalWrite(_1,LOW);
+    digitalWrite(_4,LOW);
     onedigit(m);
-    digitalWrite(_1,HIGH);
+    digitalWrite(_4,HIGH);
 
-    digitalWrite(_2,LOW);
-    onedigit(c);
-    digitalWrite(_2,HIGH);
-    
     digitalWrite(_3,LOW);
-    onedigit(d);
+    onedigit(c);
     digitalWrite(_3,HIGH);
     
-    digitalWrite(_4,LOW);
+    digitalWrite(_2,LOW);
+    onedigit(d);
+    digitalWrite(_2,HIGH);
+    
+    digitalWrite(_1,LOW);
     onedigit(u);
-    digitalWrite(_4,HIGH);
+    digitalWrite(_1,HIGH);
 
 }
 
