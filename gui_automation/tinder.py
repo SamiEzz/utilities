@@ -1,10 +1,6 @@
-
-
 import pyautogui
+from time import sleep 
 
-#print(pyautogui.position())
-#pyautogui.typewrite("")
-#pyautogui.hotkey("ctrl","v")
-
-pyautogui.click(1084,495)
-pyautogui.typewrite(["right"])
+while 1:
+    pyautogui.typewrite(["right"])
+    sleep(0.1)
